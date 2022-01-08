@@ -1,164 +1,251 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-*{
-    font-family: "Open sans", sans-serif;
-    margin: 0;
-    padding: 0;
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
 }
 
-.header{
-    background-color: #11585D;
-    width: 100%;
-    position: fixed;
-    left:0;
-    top:0;
-    z-index: 1;
-}
-
-main{
-    padding-top: 5rem;
+* {
+  font-family: "Open sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 
-body{
-    font-size: 0.75rem;
+.header {
+  background-color: #11585d;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
-.separator{
-    width: 100%;
+main {
+  padding-top: 5rem;
+  min-width: 100%;
+  display: flex;
 }
 
-    div.separator{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-.logo-nav-container{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+body {
+  font-size: 0.75rem;
 }
 
-header a{
-    color: #D9D9D9;
-    text-decoration: none;
-    align-items: center;
+.separator {
+  width: 100%;
 }
 
-.navigation ul{
-    list-style: none;
+div.separator {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-    .navigation ul li{
-        display: inline-block;
-    }
-
-        .navigation ul li a{
-            display: block;
-            padding: 1.3rem 1rem;
-            font-size: 1.5rem;
-            transition: all 0.3s linear;
-            border-radius: 3px;
-        }
-
-            .navigation ul li a:hover{
-                background-color: #008F99;
-            }
-
-img.logo{
-    height: 3.5rem;
-    padding: 0.7rem;
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.home .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-
-}
-    .home .image{
-        position:relative;
-        align-items:center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .home .image::before{
-        content: '';
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        left: 0px;
-        bottom: 0px;
-        background-image: url(/Contenido/pexels-olya-kobruseva-8962453.jpg);
-        background-size: cover;
-        background-position: top center;
-        opacity: 0.5;
-    }
-
-        .home .image img{
-            position: relative;
-            height: 40rem;
-        }
-    
-    .home .text{
-        text-align: center;
-        color: #5AABAF;
-        padding: 3rem 5rem;
-    }
-
-    .home .text h3{
-        font-size: 1.5rem;
-        padding-bottom: 2rem;
-    }
-
-    .home .text h2{
-        font-size: 1.75rem;
-        padding-bottom: 2rem;
-    }
-
-    .home .text h1{
-        font-size: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .home .welcome{
-        color: #008E97;
-        width: 100%;
-        padding-bottom: 4rem;
-        
-    }
-
-        .home .welcome h1{
-            padding: 3rem 10rem;
-            font-size: 2.5rem;
-            font-weight: bolder;
-        }
-
-    .welcome-inner-text{
-        background-color: #6DB4B8;
-        font-size: 1rem;
-        line-height: 2rem;
-        border-radius: 50px;
-        padding: 1.5rem 5rem;
-        text-align: center;
-        color: black;
-        width: 60%;
-        margin:auto;
-    }
-
-.about .grid{
-    display: grid;
-    grid-template-columns: 5fr 2fr ;
+header a {
+  color: #d9d9d9;
+  text-decoration: none;
+  align-items: center;
 }
 
-.about .text p{
-    padding: 0.5rem 5rem;
+.navigation ul {
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  display: block;
+  padding: 1.3rem 1rem;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+  border-radius: 3px;
+}
+
+.navigation ul li a:hover {
+  background-color: #008f99;
+}
+
+img.logo {
+  height: 3.5rem;
+  padding: 0.7rem;
+}
+
+.home .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.home .image {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.home .image::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-image: url(/Contenido/pexels-olya-kobruseva-8962453.jpg);
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.5;
+}
+
+.home .image img {
+  position: relative;
+  height: 40rem;
+  display: block;
+  
+}
+
+.home .text {
+  text-align: center;
+  color: #5aabaf;
+  padding: 3rem 5rem;
+}
+
+.home .text h3 {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.home .text h2 {
+  font-size: 1.75rem;
+  padding-bottom: 2rem;
+}
+
+.home .text h1 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.home .welcome {
+  color: #008e97;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.home .welcome h1 {
+  padding: 3rem 10rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.welcome-inner-text {
+  background-color: #6db4b8;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-radius: 50px;
+  padding: 1.5rem 5rem;
+  text-align: center;
+  color: black;
+  width: 60%;
+  margin: auto;
+}
+
+.about .grid {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.about .text p {
+  padding: 0.5rem 5rem;
+  font-size: 1rem;
+}
+
+.about .image img {
+  width: min(50vw, 45rem);
+}
+
+.services .text {
+  padding: 0.5rem 5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.services .grid {
+  display: grid;
+  margin: auto;
+  max-width: min(80%, 100rem);
+  min-width: 0;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  
+}
+
+.services .grid > article {
+  border-color: black;
+  text-align: center;
+  align-content: center;
+  transition: tranform 0.3s;
+  width: 15.625rem;
+}
+
+.card .text {
+  font-size: 0.8rem;
+  text-align: center;
+  height: 6rem;
+  margin: auto;
+}
+
+.card-img {
+  width: 50%;
+  display: block;
+}
+
+.img-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 12.5rem;
+  height: 12.5rem;
+  background-color: #6db4b8;
+  border-radius: 50%;
+  margin: auto;
+}
+
+@media (max-width: 1024px){
+  .home .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .home .welcome h1 {
+    padding: 3rem 4rem;
+  }
+  
+  .welcome-inner-text {
+    background-color: #6db4b8;
     font-size: 1rem;
-}
+    line-height: 2rem;
+    border-radius: 50px;
+    padding: 1.5rem 5rem;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin: auto;
+  }
 
-.about .image img{
-    width: 45rem;
-}
-    
-    
+  .about .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
+  .about .image{
+    margin: auto;
+  }
+  
+}
