@@ -100,6 +100,7 @@ img.logo {
 .home .image::before {
   content: "";
   position: absolute;
+  z-index: 0;
   right: 0px;
   top: 0px;
   left: 0px;
@@ -111,6 +112,7 @@ img.logo {
 }
 
 .home .image img {
+  z-index: 1;
   position: relative;
   height: 40rem;
   display: block;
