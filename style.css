@@ -49,6 +49,10 @@ div.separator {
   align-items: center;
 }
 
+header{
+  z-index: 100;
+}
+
 header a {
   color: #d9d9d9;
   text-decoration: none;
@@ -112,7 +116,7 @@ img.logo {
 }
 
 .home .image img {
-  z-index: 1;
+  z-index: 0;
   position: relative;
   height: 40rem;
   display: block;
