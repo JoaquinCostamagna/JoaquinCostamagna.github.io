@@ -13,22 +13,22 @@
 }
 
 .header {
+  position: sticky;
   background-color: #11585d;
   width: 100%;
-  position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
 }
 
 main {
-  padding-top: 5rem;
   min-width: 100%;
   display: flex;
 }
 
 body {
   font-size: 0.75rem;
+  min-width: fit-content;
   overflow-x: hidden;
   background-color: white;
 }
@@ -107,7 +107,7 @@ img.logo {
   top: 0px;
   left: 0px;
   bottom: 0px;
-  background-image: url(/Contenido/pexels-olya-kobruseva-8962453.jpg);
+  background-image: url(/Contenido/Utils/pexels-olya-kobruseva-8962453.jpg);
   background-size: cover;
   background-position: top center;
   opacity: 0.5;
@@ -268,22 +268,35 @@ img.logo {
   color: #fff;
   cursor: pointer;
   z-index: 500;
-  transition: 2s ease all;
 }
 
 .contenedor_clientes .contenedor_principal .flecha_izquierda:hover,
 .contenedor_clientes .contenedor_principal .flecha_derecha:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(17, 88, 93, 0.5);
 }
 
 .contenedor_clientes .contenedor_principal .flecha_izquierda {
-  background: url("/Contenido/flecha_izquierda.png");
   left: 0;
+  background: rgb(0, 0, 0, 0);
 }
 
 .contenedor_clientes .contenedor_principal .flecha_derecha {
-  background: url("/Contenido/flecha_derecha.png");
   right: 0;
+  background: rgb(0, 0, 0, 0);
+}
+
+.contenedor_clientes .contenedor_principal .flecha_derecha img {
+  position: absolute;
+  width: 3rem;
+  left: 0;
+  top: calc(50% - 1.5rem);
+}
+
+.contenedor_clientes .contenedor_principal .flecha_izquierda img {
+  position: absolute;
+  width: 3rem;
+  right: 0;
+  top: calc(50% - 1.5rem);
 }
 
 .contenedor_clientes .contenedor_carousel {
@@ -302,6 +315,8 @@ img.logo {
   min-width: 20%;
   transition: 0.3s ease all;
   box-shadow: 0.313rem 0.313rem 0.625rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: white;
 }
 
 .contenedor_clientes .contenedor_carousel .carousel .elementos img {
@@ -310,9 +325,26 @@ img.logo {
   vertical-align: top;
 }
 
-.contenedor_clientes .contenedor_carousel .carousel .elementos.hover {
+.contenedor_clientes .contenedor_carousel .carousel .elementos p {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: max(16px, 1.3vw);
+  display: none;
+}
+
+.contenedor_clientes .contenedor_carousel .carousel .elementos:hover {
   transform: scale(1.2);
   transform-origin: center;
+}
+.contenedor_clientes .contenedor_carousel .carousel .elementos:hover p {
+  display: block;
+}
+
+.contenedor_clientes .contenedor_carousel .carousel .elementos:hover img {
+  opacity: 0.5;
 }
 
 .testimonies-container {
@@ -375,7 +407,7 @@ img.logo {
 
   .navigation li a {
     display: block;
-    padding: 1.3rem 1rem;
+    padding: min(1.3rem, 2vh) 1rem;
     font-size: min(6vw, 1.5rem);
     transition: all 0.3s linear;
     border-radius: 3px;
@@ -389,7 +421,7 @@ img.logo {
     display: block;
     z-index: 9999;
     position: absolute;
-    background: url("/Contenido/nav-button-hamburger.png");
+    background: url("/Contenido/Utils/nav-button-hamburger.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
