@@ -12,18 +12,24 @@
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; 
+}
+
 .header {
   position: sticky;
   background-color: #11585d;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 main {
-  min-width: 100%;
+  width: min(100%, 1920px);
   display: flex;
+  margin: auto;
 }
 
 body {
@@ -40,6 +46,68 @@ body {
 div.separator {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.language-toggle {
+  position: relative;
+  display: inline;
+  flex-grow: 4;
+  justify-content: right;
+  margin-left: 2rem;
+}
+
+.language-toggle label {
+  position: absolute;
+  font-weight: 600;
+  pointer-events: none;  
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.englishbtn {
+  bottom: 10px;
+  left: 15px;
+}
+
+.spanishbtn {
+  bottom: 10px;
+  left: 65px;
+}
+
+.language-toggle input[type="checkbox"]{
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background: #6db4b8;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  transition: .4s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.language-toggle input[type="checkbox"]::before{
+  z-index: 100;
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .4s;
+}
+
+.language-toggle input:checked[type="checkbox"]{
+  background: #6db4b8;
+}
+
+.language-toggle input:checked[type="checkbox"]::before {
+  left: 60px;
+  transition: .4s;
 }
 
 .logo-nav-container {
@@ -83,7 +151,7 @@ header a {
 }
 
 img.logo {
-  height: 3.5rem;
+  height: 4rem;
   padding: 0.7rem;
 }
 
@@ -102,7 +170,6 @@ img.logo {
 .home .image::before {
   content: "";
   position: absolute;
-  z-index: 0;
   right: 0px;
   top: 0px;
   left: 0px;
@@ -114,7 +181,6 @@ img.logo {
 }
 
 .home .image img {
-  z-index: 0;
   position: relative;
   height: 40rem;
   display: block;
@@ -180,8 +246,8 @@ img.logo {
 }
 
 .services .text {
-  padding: 0.5rem 5rem;
-  font-size: 1rem;
+  padding: 2rem 5rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -203,11 +269,17 @@ img.logo {
   margin: auto;
 }
 
-.card .text {
+.card .text h3{
   font-size: 0.8rem;
   text-align: center;
-  height: 6rem;
-  margin: auto;
+  height: 5rem;
+  width: 100px;
+}
+
+.card .text {
+  padding: 1rem 0;
+  text-align: justify;
+  display: inline-block;
 }
 
 .card-img {
@@ -267,7 +339,7 @@ img.logo {
   width: 3.125rem;
   color: #fff;
   cursor: pointer;
-  z-index: 500;
+  z-index: 50;
 }
 
 .contenedor_clientes .contenedor_principal .flecha_izquierda:hover,
@@ -331,7 +403,7 @@ img.logo {
   width: 100%;
   text-align: center;
   font-weight: bolder;
-  font-size: max(16px, 1.3vw);
+  font-size: clamp(16px, 1.3vw, 32px);
   display: none;
 }
 
@@ -358,7 +430,7 @@ img.logo {
   padding: 2rem 3rem;
   width: min(60rem, 80%);
   color: white;
-  font-size: max(16px, 1vw);
+  font-size: clamp(16px, 1vw, 32px);
   margin: 3rem auto;
 }
 
@@ -375,7 +447,7 @@ img.logo {
 .testimonie .grid p {
   font-weight: bold;
   font-style: italic;
-  padding: 0 2rem;
+  padding: 1em 2rem;
 }
 
 .testimonie .author p {
@@ -431,6 +503,8 @@ img.logo {
     top: 1rem;
     right: 2rem;
   }
+
+  
 
   .home .grid {
     grid-template-columns: 1fr;
