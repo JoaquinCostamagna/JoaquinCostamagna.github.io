@@ -66,7 +66,7 @@ const data = {
         "contact5": "Escribe tu mensaje...",
         "contact6": "Enviar",
         "error1": "Dirección de email inválida",
-        "sepAbout": "/Contenido/Separators/SeparadorAboutUsES.png",
+        "sepAbout": "/Contenido/Separators/SeparadorAboutUsEs.png",
         "sepServices": "/Contenido/Separators/SeparadorServiciosEs.png",
         "sepClients": "/Contenido/Separators/SeparadorClientesEs.png",
         "sepTestimonies": "/Contenido/Separators/SeparadorTestimoniosEs.png",

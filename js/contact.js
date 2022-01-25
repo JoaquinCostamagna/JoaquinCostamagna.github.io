@@ -21,22 +21,23 @@ function validateForm(){
             message: contactMessage.value
         }
         
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/');
-        xhr.setRequestHeader('content-type', ' application/json');
-        xhr.onload = function(){
-            console.log(xhr.responseText);
-            if(xhr.responseText == 'success'){
-                alert('email sent');
-                contactName.value = "";
-                contactEmail.value = "";
-                contactMessage.value = "";
-            }
-            else{
-                alert('something went wrong');
-            }
-        }
-        xhr.send(JSON.stringify(formData));
+        console.log(formData);
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/');
+        // xhr.setRequestHeader('content-type', ' application/json');
+        // xhr.onload = function(){
+        //     console.log(xhr.responseText);
+        //     if(xhr.responseText == 'success'){
+        //         alert('email sent');
+        //         contactName.value = "";
+        //         contactEmail.value = "";
+        //         contactMessage.value = "";
+        //     }
+        //     else{
+        //         alert('something went wrong');
+        //     }
+        // }
+        // xhr.send(JSON.stringify(formData));
     }
 
     
