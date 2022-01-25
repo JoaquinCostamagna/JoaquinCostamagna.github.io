@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soluciones Contables</title>
     <link rel="icon" type="x-icon" href="/Contenido/Logos/Logo.png">
-    <link rel="stylesheet" href="style.css" />
-    <script src="nav.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/nav.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -35,7 +35,7 @@
             <li><a id="navServ" href="#services">Services</a></li>
             <li><a id="navClients" href="#clients">Clients/Industries</a></li>
             <li><a id="navTest" href="#testimonies">Testimonies</a></li>
-            <li><a id="navContact" href="#">Contact</a></li>
+            <li><a id="navContact" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -59,8 +59,15 @@
             </div>
           </div>
 
+          <div class="separator">
+            <img
+              id="about"
+              class="separator"
+              src="/Contenido/Separators/SeparadorAboutUs.png"
+              alt=""
+            />
+          </div>
           <div id="about" class="welcome">
-            <h1 id="welcome1">About Us</h1>
             <div class="welcome-inner-text">
               <p id="welcome2">
                 We are a team of Accountants and Business Administrators with more than 10 years of experience assisting Businesses in different industries. Since 2013 we have provided more organization, profitability and peace of mind to the teams that choose us.
@@ -157,12 +164,6 @@
             />
           </div>
           <div>
-            <div id="serv1" class="text">
-              We specialize in bookkeeping and total quality management. Our
-              goal is to smooth the accounting processes and to provide audited
-              Financial statements to be ready for Tax season and Loan
-              Applications.
-            </div>
             <div class="container">
               <main class="grid">
                 <article class="card">
@@ -466,9 +467,100 @@
             </article>
           </div>
         </div>
+        <div class="contactUs">
+          <div class="separator">
+            <img id="contact" class="separator" src="/Contenido/Separators/SeparadorContact.png" alt="">
+          </div>
+          <div class="contact">
+            <div class="conteiner_contact">
+              <div class="contact_info">
+                <div class="box">
+                  <div class="icon">
+                    <img src="/Contenido/Utils/gps.png" alt="">
+                  </div>
+                  <div class="text">
+                    <h3 id="contact1">Address</h3>
+                    <p>1988 1/2 Via Pamela</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon">
+                    <img src="/Contenido/Utils/phone-call.png" alt="">
+                  </div>
+                  <div class="text">
+                    <h3 id="contact2">Phone</h3>
+                    <p>(707) 497-8153</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon">
+                    <img src="/Contenido/Utils/email.png" alt="">
+                  </div>
+                  <div class="text">
+                    <h3>Email</h3>
+                    <p>solucionescontablessandiego@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact_form">
+                <form onsubmit="event.preventDefault(); validateForm()">
+                  <h2 id="contact3">How can we help you?</h2>
+                  <div class="input_box">
+                    <input id="name" type="text" required="required">
+                    <span id="contact4">Full Name</span>
+                    <small class="error"></small>
+                  </div>
+                  <div class="input_box">
+                    <input  id="email" type="text" required="required">
+                    <span>Email</span>
+                    <small class="error"></small>
+                  </div>
+                  <div class="input_box">
+                    <textarea id="message" required="required"></textarea>
+                    <span id="contact5">Type your Message...</span>
+                    <small class="error"></small>
+                  </div>
+                  <div class="input_box">
+                    <input id="contact6" type="submit" value="Send">
+                    <p id="success"></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> 
       </div>
     </main>
-    <script src="app.js" defer></script>
-    <script src="lang.js" defer></script>
+
+    <footer>
+      <div class="footer_container">
+        <div class="footer_content_container">
+            <img class="website_logo" src="/Contenido/Logos/LogoTextoBlanco.png" alt="">
+        </div>
+        <div class="footer-menus">
+          <div class="footer_content_container">
+            <span class="menu_item_footer">(707) 497-8153</span>
+            <span class="menu_item_footer">18988 1/2 Vía Pamela</span>
+          </div>
+          <div class="footer_content_container">
+            <span class="menu_title">Legal</span>
+            <a id="" class="menu_item_footer" href="">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="footer_content_container">
+          <span class="menu_title">Follow us</span>
+          <div class="social_container">
+            <a id="" href="https://www.facebook.com/SolucionescontablesSD/" class="social_link"></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-container">
+        <span class="copyright">&copy; 2022, Camila Bermejo & Joaquin Costamagna</span>
+      </div>
+    </footer>
+
+    <script src="/js/app.js" defer></script>
+    <script src="/js/lang.js" defer></script>
+    <script src="/js/contact.js" defer></script>
   </body>
 </html>
