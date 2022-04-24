@@ -22,13 +22,16 @@ const data = {
         "client10": "Non Profits",
         "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
         "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
-        "contact1": "Address",        
-        "contact2": "Phone",
-        "contact3": "How can we help you?",        
+        "contact3": "Contact Us",        
         "contact4": "Full Name",
         "contact5": "Type your message...",
         "contact6": "Send",
         "error1": "Invalid email address",
+        "alertSuccessEmail": "Email sent correctly",
+        "alertErrorEmail": "Could not send email",
+        "alertImgSuccessEmail": "/Contenido/Utils/mail-download.gif",
+        "alertImgErrorEmail": "/Contenido/Utils/email-error.png",
+        "alertClose": "Close",
         "sepAbout": "/Contenido/Separators/SeparadorAboutUs.png",
         "sepServices": "/Contenido/Separators/SeparadorServices.png",
         "sepClients": "/Contenido/Separators/SeparadorClientes.png",
@@ -59,13 +62,16 @@ const data = {
         "client10": "Sin fines de lucro",
         "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
         "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
-        "contact1": "Dirección",        
-        "contact2": "Telefono",
-        "contact3": "¿Cómo podemos ayudarte?",        
+        "contact3": "Contáctanos",        
         "contact4": "Nombre Completo",
         "contact5": "Escribe tu mensaje...",
         "contact6": "Enviar",
         "error1": "Dirección de email inválida",
+        "alertSuccessEmail": "Correo enviado correctamente",
+        "alertErrorEmail": "No se pudo enviar el correo",
+        "alertImgSuccessEmail": "/Contenido/Utils/mail-download.gif",
+        "alertImgErrorEmail": "/Contenido/Utils/email-error.png",
+        "alertClose": "Cerrar",
         "sepAbout": "/Contenido/Separators/SeparadorAboutUsES.png",
         "sepServices": "/Contenido/Separators/SeparadorServiciosEs.png",
         "sepClients": "/Contenido/Separators/SeparadorClientesEs.png",
@@ -98,8 +104,6 @@ const client10 = document.getElementById("client10");
 const test1 = document.getElementById("test1");
 const test2 = document.getElementById("test2");
 const toggle = document.getElementById("language-toggle");
-const contact1 = document.getElementById("contact1");
-const contact2 = document.getElementById("contact2");
 const contact3 = document.getElementById("contact3");
 const contact4 = document.getElementById("contact4");
 const contact5 = document.getElementById("contact5");
@@ -109,10 +113,24 @@ const sepServices = document.getElementById("services");
 const sepClients = document.getElementById("clients");
 const sepTestimonies = document.getElementById("testimonies");
 const sepContact = document.getElementById("contact");
-var currentLanguage = "english"
+var currentLanguage = document.cookie? document.cookie.split("=")[1] : "english";
+
+if(document.cookie){
+    currentLanguage = document.cookie.split("=")[1];
+
+    if(currentLanguage == "spanish")
+    {
+        toggle.removeAttribute("checked");
+    }
+    else{
+        toggle.setAttribute("checked", true);
+    }
+
+}
+
+translate(currentLanguage);
 
 
-//translate("english");
 
 toggle.addEventListener("click", () => {
     
@@ -122,6 +140,7 @@ toggle.addEventListener("click", () => {
     else {
         currentLanguage = "spanish";
     }
+    document.cookie = "language = " + currentLanguage; 
 
     translate(currentLanguage);
 })
@@ -150,8 +169,6 @@ function translate(language) {
     client10.textContent = data[language].client10;
     test1.textContent = data[language].test1;
     test2.textContent = data[language].test2;
-    contact1.textContent = data[language].contact1;
-    contact2.textContent = data[language].contact2;
     contact3.textContent = data[language].contact3;
     contact4.textContent = data[language].contact4;
     contact5.textContent = data[language].contact5;

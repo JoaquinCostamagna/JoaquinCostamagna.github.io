@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>Soluciones Contables</title>
     <link rel="icon" type="x-icon" href="/Contenido/Logos/Logo.png">
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/nav.js" defer></script>
+    <script src="/js/nav.js?1" defer></script>
+    <script src="/js/lang.js" defer></script>
+    <script src="/js/app.js?1" defer></script>
+    <script src="/js/contact.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -24,18 +27,18 @@
 
         <div class="language-toggle">
           <input id="language-toggle" type="checkbox" checked="true">
-          <label for="language-toggle" class="englishbtn" language="english">EN</label>
+          <label for="language-toggle" class="englishbtn" >EN</label>
           <label for="language-toggle" class="spanishbtn" >ES</label>
         </div>
         
         <nav">
           <ul id="navigation" class="navigation" data-visible="false">
-            <li><a id="navHome" href="#">Home</a></li>
-            <li><a id="navAbout" href="#about">About Us</a></li>
-            <li><a id="navServ" href="#services">Services</a></li>
-            <li><a id="navClients" href="#clients">Clients/Industries</a></li>
-            <li><a id="navTest" href="#testimonies">Testimonies</a></li>
-            <li><a id="navContact" href="#contact">Contact</a></li>
+            <li><a class="navLink" id="navHome" href="#">Home</a></li>
+            <li><a class="navLink" id="navAbout" href="#about">About Us</a></li>
+            <li><a class="navLink" id="navServ" href="#services">Services</a></li>
+            <li><a class="navLink" id="navClients" href="#clients">Clients/Industries</a></li>
+            <li><a class="navLink" id="navTest" href="#testimonies">Testimonies</a></li>
+            <li><a class="navLink" id="navContact" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -43,6 +46,21 @@
 
     <main class="main">
       <div class="container">
+        <div id="custom-alert" class="custom-alert">
+          <img id="alert-img" src="/Contenido/Utils/mail-download.gif" alt="">
+          <h1 id="alert-text">Email sent correctly</h1>
+          <span id="alert-close">Close</span>
+        </div>
+        <div class="action-button-cotnainer">
+          <div class="social-button">
+            <a href="https://m.me/SolucionescontablesSD" target="_blank" class="social-action-button"><img src="/Contenido/Utils/messenger.png" alt="" class=""></a>
+            <a href="https://api.whatsapp.com/send?phone=+17074978153" target="_blank" class="social-action-button"><img src="/Contenido/Utils/whatsapp.png" alt=""></a>
+            <!-- <a href="#" class="social-action-button"><img src="/Contenido/Utils/sms.png" alt=""></a> -->
+            <a href="tel:+17074978153" target="_blank" class="social-action-button"><img src="/Contenido/Utils/telephone.png" alt=""></a>
+            <div class="social-action-button-trigger"><img src="/Contenido/Utils/plus.png" alt=""></div>
+        </div>
+          <a href="#" class="return-action-button-trigger"><img src="/Contenido/Utils/flecha_derecha.png" alt=""></a>
+        </div>
         <div class="home">
           <div class="grid">
             <div class="image">
@@ -438,33 +456,65 @@
             <img id="testimonies" class="separator" src="/Contenido/Separators/SeparadorTestimonies.png" alt="">
           </div>
           <div class="testimonies-container">
-            <article class="testimonie">
-              <div class="grid">
-                <img src="/Contenido/Utils/whitequote.png" alt="">
-                <p id="test1" class="quote">I have worked with Romina for the last year, and it has been a blessing. 
-                  I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. 
-                  I just wish I had met her sooner so I had more time to grow my business.
-                  </p>
+            <div class="contenedor_controles">
+              <div class="indicadores-testimonio"></div>
+            </div>
+            <div class="contenedor_principal">
+              <button role="button" id="flecha_izquierda_testimonio" class="flecha_izquierda flecha-testimonio">
+                <img src="/Contenido/Utils/flecha_izquierda.png" alt="">
+              </button>
+              <div class="contenedor_carousel">
+                <div class="carousel">
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test1" class="quote">I have worked with Romina for the last year, and it has been a blessing. 
+                          I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. 
+                          I just wish I had met her sooner so I had more time to grow my business.
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Abe Lopez </p>
+                        <p>Abe Design Studio</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test2" class="quote">It's hard to imagine my company without Soluciones Contables -- they've become that essential. 
+                          Romina and her team are so responsive, it's like they're right there in the office, working at my side. 
+                          As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, 
+                          I know I can always turn to Soluciones Contables. They are a natural extension of my operation.
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Michael Vegas </p>
+                        <p>Complete Caregivers</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test2" class="quote">Helping companies with their taxes requires deep dives into their books. We often see businesses with unorganized books, and this leads to delays in filing their taxes, obtaining loans, or closing important business deals. We refer Romina and her team to companies that need high quality books on a timely basis. She’s great at reviewing journals for mistakes, correcting payroll entries, and making sure your books are ready for review by the CPA. Tax firms and business owners alike can benefit by working with Romina!
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Jorge P Garcia, EA</p>
+                        <p>GB Tax Consulting.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
               </div>
-              <div class="author">
-                <p>Abe Lopez </p>
-                <p>Abe Design Studio</p>
-              </div>
-            </article>
-            <article class="testimonie">
-              <div class="grid">
-                <img src="/Contenido/Utils/whitequote.png" alt="">
-                <p id="test2" class="quote">It's hard to imagine my company without Soluciones Contables -- they've become that essential. 
-                  Romina and her team are so responsive, it's like they're right there in the office, working at my side. 
-                  As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, 
-                  I know I can always turn to Soluciones Contables. They are a natural extension of my operation.
-                  </p>
-              </div>
-              <div class="author">
-                <p>Michael Vegas </p>
-                <p>Complete Caregivers</p>
-              </div>
-            </article>
+              <button role="button" id="flecha_derecha_testimonio" class="flecha_derecha flecha-testimonio">
+                <img src="/Contenido/Utils/flecha_derecha.png" alt="">
+              </button>
+            </div>
           </div>
         </div>
         <div class="contactUs">
@@ -473,50 +523,21 @@
           </div>
           <div class="contact">
             <div class="conteiner_contact">
-              <div class="contact_info">
-                <div class="box">
-                  <div class="icon">
-                    <img src="/Contenido/Utils/gps.png" alt="">
-                  </div>
-                  <div class="text">
-                    <h3 id="contact1">Address</h3>
-                    <p>1988 1/2 Via Pamela</p>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="icon">
-                    <img src="/Contenido/Utils/phone-call.png" alt="">
-                  </div>
-                  <div class="text">
-                    <h3 id="contact2">Phone</h3>
-                    <p>(707) 497-8153</p>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="icon">
-                    <img src="/Contenido/Utils/email.png" alt="">
-                  </div>
-                  <div class="text">
-                    <h3>Email</h3>
-                    <p>solucionescontablessandiego@gmail.com</p>
-                  </div>
-                </div>
-              </div>
               <div class="contact_form">
-                <form onsubmit="event.preventDefault(); validateForm()">
-                  <h2 id="contact3">How can we help you?</h2>
+                <form action="/PHPmailer/sendMail.php" method="post">
+                  <h2 id="contact3">Contact Us</h2>
                   <div class="input_box">
-                    <input id="name" type="text" required="required">
+                    <input id="name" name="name" type="text" required="required">
                     <span id="contact4">Full Name</span>
                     <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <input  id="email" type="text" required="required">
-                    <span>Email</span>
+                    <input  id="email" name="email" type="email" required="required" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
                     <small class="error"></small>
+                    <span>Email</span>
                   </div>
                   <div class="input_box">
-                    <textarea id="message" required="required"></textarea>
+                    <textarea id="message" name="message" required="required" onkeyup="textAreaAdjust(this)"></textarea>
                     <span id="contact5">Type your Message...</span>
                     <small class="error"></small>
                   </div>
@@ -539,8 +560,9 @@
         </div>
         <div class="footer-menus">
           <div class="footer_content_container">
+            <span class="menu_item_footer">admin@solucionescontablessd.com</span>
             <span class="menu_item_footer">(707) 497-8153</span>
-            <span class="menu_item_footer">18988 1/2 Vía Pamela</span>
+            <span class="menu_item_footer">18988 1/2 Vía Pamela, Jamul, CA 91935</span>
           </div>
           <div class="footer_content_container">
             <span class="menu_title">Legal</span>
@@ -555,12 +577,8 @@
         </div>
       </div>
       <div class="copyright-container">
-        <span class="copyright">&copy; 2022, Soluciones Contables San Diego<br> Design and Development by Camila Bermejo & Joaquin Costamagna </span>
+        <span class="copyright">&copy; 2022, Soluciones Contables San Diego<br> Design and Development by Camila Bermejo & Joaquin Costamagna</span>
       </div>
     </footer>
-
-    <script src="/js/app.js" defer></script>
-    <script src="/js/lang.js" defer></script>
-    <script src="/js/contact.js" defer></script>
   </body>
 </html>
